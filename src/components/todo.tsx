@@ -7,7 +7,9 @@ type TodoProps = {
   todo: any;
 };
 
+
 const API_URL = 'http://localhost:8000';
+
 
 const Todo = ({ todo }: TodoProps) => {
   // const { data: todos } = useSWR(`${API_URL}/allTodos`); // todosデータを取得
@@ -41,20 +43,22 @@ const Todo = ({ todo }: TodoProps) => {
   };
 
   const handleEdit = async () => {
-    // if (editing) {
-    //   const response = await fetch(`${API_URL}/editTodo/${todo.id}`, {
-    //     method: 'PUT',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ title: editedTitle }),
-    //   });
-    // if (response.ok && todos) {
-    //   const updatedTodos = todos.map((t: TodoType) =>
-    //     t.id === todo.id ? { ...t, title: editedTitle } : t,
-    //   );
-    //   mutate(`${API_URL}/allTodos`, updatedTodos, false);
-    // }
-    // }
-    // setEditing(!editing);
+
+    if (editing) {
+      const response = await fetch(`${API_URL}/editTodo/${todo.id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title: editedTitle }),
+      });
+      // if (response.ok && todos) {
+      //   const updatedTodos = todos.map((t: TodoType) =>
+      //     t.id === todo.id ? { ...t, title: editedTitle } : t,
+      //   );
+      //   mutate(`${API_URL}/allTodos`, updatedTodos, false);
+      // }
+    }
+    setEditing(!editing);
+
   };
 
   return (
@@ -81,7 +85,9 @@ const Todo = ({ todo }: TodoProps) => {
                 />
               ) : (
                 <span className={`text-lg font-medium mr-2 ""`}>散歩</span>
+
               )} */}
+
             </label>
           </div>
           <div className='flex items-center space-x-2'>
