@@ -32,9 +32,9 @@ function App() {
         </div>
       </form>
       <ul className='divide-y divide-gray-200 px-4'>
-        {/* {data?.map((todo) => (
-          <Todo key={todo.id} todo={todo} />
-        ))} */}
+        <Todo key={1} />
+        <Todo key={1} />
+        <Todo key={3} />
       </ul>
     </div>
   );
