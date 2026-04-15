@@ -15,19 +15,19 @@ const Todo = ({ todo }: TodoProps) => {
   const [editedTitle, setEditedTitle] = useState(todo.title);
 
   // const toggleTodoCompletion = async (id: number, isCompleted: boolean) => {
-    // const response = await fetch(`${API_URL}/editTodo/${id}`, {
-    //   method: 'PUT',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ isCompleted: !isCompleted }),
-    // });
-    // if (response.ok && todos) {
-    //   // todosが存在することを確認
-    //   const updatedTodos = todos.map((todo: TodoType) =>
-    //     todo.id === id ? { ...todo, isCompleted: !isCompleted } : todo,
-    //   );
-    //   mutate(`${API_URL}/allTodos`, updatedTodos, false); // 更新されたtodosをキャッシュにセット
-    // }
-  };
+  // const response = await fetch(`${API_URL}/editTodo/${id}`, {
+  //   method: 'PUT',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify({ isCompleted: !isCompleted }),
+  // });
+  // if (response.ok && todos) {
+  //   // todosが存在することを確認
+  //   const updatedTodos = todos.map((todo: TodoType) =>
+  //     todo.id === id ? { ...todo, isCompleted: !isCompleted } : todo,
+  //   );
+  //   mutate(`${API_URL}/allTodos`, updatedTodos, false); // 更新されたtodosをキャッシュにセット
+  // }
+  // };
 
   const deleteTodo = async (id: number) => {
     const response = await fetch(`${API_URL}/deleteTodo/${id}`, {
