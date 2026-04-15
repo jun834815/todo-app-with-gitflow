@@ -14,7 +14,7 @@ const Todo = ({ todo }: TodoProps) => {
   const [editing, setEditing] = useState(false);
   const [editedTitle, setEditedTitle] = useState(todo.title);
 
-  const toggleTodoCompletion = async (id: number, isCompleted: boolean) => {
+  // const toggleTodoCompletion = async (id: number, isCompleted: boolean) => {
     // const response = await fetch(`${API_URL}/editTodo/${id}`, {
     //   method: 'PUT',
     //   headers: { 'Content-Type': 'application/json' },
