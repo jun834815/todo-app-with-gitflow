@@ -7,7 +7,11 @@ type TodoProps = {
   todo: any;
 };
 
-const API_URL = '';
+
+
+const API_URL = 'http://localhost:8000';
+
+
 
 const Todo = ({ todo }: TodoProps) => {
   // const { data: todos } = useSWR(`${API_URL}/allTodos`); // todosデータを取得
@@ -55,7 +59,9 @@ const Todo = ({ todo }: TodoProps) => {
               // onChange={() => toggleTodoCompletion(todo.id, todo.isCompleted)}
             />
             <label className='ml-3 block text-gray-900'>
-              {editing ? (
+
+              {/* {editing ? (
+
                 <input
                   type='text'
                   // value={editedTitle}
@@ -64,7 +70,10 @@ const Todo = ({ todo }: TodoProps) => {
                 />
               ) : (
                 <span className={`text-lg font-medium mr-2 ""`}>散歩</span>
-              )}
+
+
+              )} */}
+
             </label>
           </div>
           <div className='flex items-center space-x-2'>
