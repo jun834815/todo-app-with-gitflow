@@ -8,7 +8,9 @@ type TodoProps = {
 };
 
 
+
 const API_URL = 'http://localhost:8000';
+
 
 
 const Todo = ({ todo }: TodoProps) => {
@@ -42,25 +44,6 @@ const Todo = ({ todo }: TodoProps) => {
     // }
   };
 
-  const handleEdit = async () => {
-
-    if (editing) {
-      const response = await fetch(`${API_URL}/editTodo/${todo.id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title: editedTitle }),
-      });
-      // if (response.ok && todos) {
-      //   const updatedTodos = todos.map((t: TodoType) =>
-      //     t.id === todo.id ? { ...t, title: editedTitle } : t,
-      //   );
-      //   mutate(`${API_URL}/allTodos`, updatedTodos, false);
-      // }
-    }
-    setEditing(!editing);
-
-  };
-
   return (
     <div>
       <li className='py-4'>
@@ -76,7 +59,9 @@ const Todo = ({ todo }: TodoProps) => {
               // onChange={() => toggleTodoCompletion(todo.id, todo.isCompleted)}
             />
             <label className='ml-3 block text-gray-900'>
+
               {/* {editing ? (
+
                 <input
                   type='text'
                   // value={editedTitle}
@@ -85,6 +70,7 @@ const Todo = ({ todo }: TodoProps) => {
                 />
               ) : (
                 <span className={`text-lg font-medium mr-2 ""`}>散歩</span>
+
 
               )} */}
 
