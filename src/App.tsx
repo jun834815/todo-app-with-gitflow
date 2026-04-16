@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [title, setTitle] = useState<string>('');
   const API_URL = 'http://localhost:8080';
-  康;
+康
   const addTodo = async (e: React.FormEvent) => {
     e.preventDefault();
     const response = await fetch(`${API_URL}/createTodo`, {
@@ -14,12 +14,12 @@ function App() {
     });
 
     if (response.ok) {
-      const newTodo = await response.json();
-      mutate(
-        `${API_URL}/allTodos`,
-        async (currentTodos: TodoType[] = []) => [newTodo, ...currentTodos],
-        false,
-      );
+      // const newTodo = await response.json();
+      // mutate(
+      //   `${API_URL}/allTodos`,
+      //   async (currentTodos: TodoType[] = []) => [newTodo, ...currentTodos],
+      //   false,
+      // );
       setTitle(''); // Reset input after adding
     }
   };

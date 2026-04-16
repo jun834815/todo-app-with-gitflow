@@ -1,15 +1,15 @@
 // import { API_URL } from '@/constants/url';
 import React, { useState } from 'react';
-import type { TodoType } from '../types';
 // import { mutate } from 'swr';
 // import useSWR from 'swr';
 
 type TodoProps = {
-  todo: TodoType;
-;
+  todo: any;
 };
 
-const API_URL = 'http://localhost:8070';
+
+
+const API_URL = 'http://localhost:8000';
 
 
 
